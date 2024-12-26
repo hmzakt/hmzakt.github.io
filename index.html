@@ -14,21 +14,14 @@
     <nav class="navbar">
 
         <ul class="navList">
-            <a href="#home">
-                <li class="list">Home</li>
-            </a>
-            <a href="#about">
-                <li class="list">About</li>
-            </a>
-            <a href="#project">
-                <li class="list">Projects</li>
-            </a>
-            <a href="#contact">
-                <li class="list">Contact</li>
-            </a>
+
+            <li class="list" onclick="scrollToHome()">Home</li>
+            <li class="list" onclick="scrollToAbout()">About</li>
+            <li class="list" onclick="scrollToProjects()">Projects</li>
+            <li class="list" onclick="scrollToContact()">Contact</li>
         </ul>
     </nav>
-    <section id = "home" class="intro">
+    <section id="home" class="intro">
         <div class="NameIntroduction">
             <div class="hey">Hey, I am</div>
             <div class="name">MD HAMZA AKHTAR</div>
@@ -41,10 +34,10 @@
                 I strive to learn and grow with every opportunity that comes my way."
             </div>
         </div>
-        <a href = #project><button class="projectButton">Projects</button></a>
+        <button class="projectButton" onclick="scrollToProjects()">Projects</button>
 
         <div class="JustToAlign">
-            <div class="scroll-indicator">
+            <div class="scroll-indicator" onclick="scrollToAbout()">
                 <div class="dot"></div>
             </div>
         </div>
@@ -69,7 +62,8 @@
                 </p>
 
             </div>
-            <button class=aboutContact>
+
+            <button class=aboutContact onclick="scrollToContact()">
                 Contact
             </button>
         </div>
@@ -125,7 +119,9 @@
                             </ul>
                             <p>This design prioritizes user engagement, ensuring a dynamic and fluid browsing
                                 experience.</p>
-                            <button class="projectLink">View source code</button>
+                            <a href="https://github.com/hmzakt/hmzakt.github.io" target="_blank">
+                                <button class="projectLink">View source code</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -193,26 +189,33 @@
             <div class="row">
 
                 <div class="btnSocial">
-                    <div class="socialLogo"><img src="leetcode.svg" alt="leetcode"></div>
-                    <span class="socialLabel lc">Leetcode</span>
-                </div>
-                <div class="btnSocial">
-                    <div class="socialLogo"><img src="codechef.svg" alt="codechef"></div>
-                    <span class="socialLabel cc">codechef</span>
-                </div>
-                <div class="btnSocial">
-                    <div class="socialLogo"><img src="gfg.svg" alt="LinkedIn"></div>
-                    <span class="socialLabel gfg">Geeks for Geeks</span>
-                </div>
-                <div class="btnSocial">
-                    <div class="socialLogo"><img src="gh.svg" alt="GitHub"></div>
-                    <span class="socialLabel github">Github</span>
-                </div>
+                    <a href="https://leetcode.com/u/hmz_akt/" target="_blank">
+                        <div class="socialLogo"><img src="leetcode.svg" alt="leetcode"></div>
+                        <span class="socialLabel lc">Leetcode</span>
+                </div></a>
+                <a href="https://www.codechef.com/users/hmz_akt" target="_blank">
+                    <div class="btnSocial">
+                        <div class="socialLogo"><img src="codechef.svg" alt="codechef"></div>
+                        <span class="socialLabel cc">codechef</span>
+                    </div>
+                </a>
+                <a href="https://www.geeksforgeeks.org/user/hmz_akt/" target="_blank">
+                    <div class="btnSocial">
+                        <div class="socialLogo"><img src="gfg.svg" alt="LinkedIn"></div>
+                        <span class="socialLabel gfg">Geeks for Geeks</span>
+                    </div>
+                </a>
+                <a href="https://github.com/hmzakt?tab=repositories" target="_blank">
+                    <div class="btnSocial">
+                        <div class="socialLogo"><img src="gh.svg" alt="GitHub"></div>
+                        <span class="socialLabel github">Github</span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
     </div>
-    <footer class="foot">Made by Md Hamza Akhtar</footer>
+    <footer class="foot">Made by Hmz</footer>
     <script src="script.js"></script>
 </body>
 
