@@ -26,16 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const flyInElements = document.querySelectorAll('.fly-in');
 
     const observerOptions = {
-        root: null, 
-        rootMargin: '0px', 
+        root: null,
+        rootMargin: '0px',
         threshold: 0.1,
     };
 
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fly-in-visible'); 
-                observer.unobserve(entry.target); 
+                entry.target.classList.add('fly-in-visible');
+                observer.unobserve(entry.target);
             }
         });
     };
@@ -44,3 +44,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     flyInElements.forEach(element => observer.observe(element));
 });
+function scrollToHome() {
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+}
+function scrollToContact() {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+
+function scrollToProjects() {
+    document.getElementById('project').scrollIntoView({ behavior: 'smooth' });
+}
+function scrollToAbout() {
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+}
