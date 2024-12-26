@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    color: #cdcdcd;
+    margin: 0;
+    box-sizing: border-box;
+}
+* {
+    scrollbar-width: 6px; /* Thin scrollbar */
+    scrollbar-color: #1B0330; /* Thumb color and track color */
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 6px; /* Thinner width */
+    height: 3px; /* Thinner height for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1B0330; /* Scrollbar thumb color */
+    border-radius: 20px; /* More rounded edges */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track */
+}
+
+.navbar {
+    margin: 10px 20px 1% 20px;
+    border-radius: 50px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0px 20px;
+    background-color: #cdcdcd;
+    width: calc(100% - 40px);
+    height: 50px;
+    align-items: center;
+}
+.navList {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #cdcdcd;
+}
+
+.navList li{
+    margin-right: 30px;
+    background-color: #cdcdcd;
+    color: #1B0330;
+    font-family: "poppins";
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.list {
+    font-size: 16px;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.list:hover {
+    transform: scale(1.2); /* Scale the font size on hover */
+    transform-origin: center; /* Make sure the scaling happens from the center */
+}
+
+.intro {
+    background-color: #1B0330;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%231B0330'/%3E%3Cstop offset='1' stop-color='%230C012B'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+    /* background-attachment: fixed; */
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 80px 18vw;
+    padding-bottom: 10px;
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+.intro div {
+    background: none;
+    font-family: "poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hey {
+    margin-top: 120px;
+    font-size: 25px;
+}
+
+.name {
+    font-family: "doto";
+    font-size: 70px;
+    font-weight: 500;
+    font-style: italic;
+    color: #deb8e7;
+}
+
+.tag {
+    font-size: 50px;
+}
+
+.about {
+    margin-top: 20px;
+    padding: 5px;
+    max-width: 60%;
+}
+
+.projectButton {
+    font-family: "poppins";
+    font-size: 15px;
+    height: 50px;
+    width: 90px;
+    padding: 12px;
+    align-items: center;
+    margin-top: 35px;
+    border-radius: 23px;
+    border: 1px solid 1B0330;
+    background-color: #beb5c3;
+    color: #1B0330;
+    border: 2px solid #000000;
+}
+ .projectButton:hover{
+    font-size: 16px;
+    height: 50px;
+    width: 95px;
+    border-radius: 23px;
+    transform-origin: center;
+ }
+
+
+.JustToAlign {
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-indicator {
+    margin-top: 5px;
+
+    width: 20px;
+    height: 50px;
+    border: 2px solid #8d559ba9;
+    border-radius: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    animation: pulse 2s infinite ease-in-out;
+    overflow: hidden;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 2px solid #8d559ba9;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    animation: move-down 3s infinite ease-in-out;
+}
+
+.secondPage {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px 10px 10px;
+    font-family: "poppins";
+    flex-wrap: wrap;
+    background-image: url('https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.secondPage>div {
+    z-index: 800;
+    margin-top: 150px;
+    width: 500px;
+    padding: 40px;
+    border-radius: 30px;
+    z-index: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+}
+
+.moreAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.heading1 {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    padding: 20px 20px;
+    font-weight: 600;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.aboutContact {
+    font-family: "poppins";
+    height: 50px;
+    width: 100px;
+    padding: 12px;
+    align-items: center;
+    margin-top: 35px;
+    border-radius: 23px;
+    z-index: 500;
+    border: 3px solid #1B0330;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+}
+.aboutContact:hover{
+    transform: scale(1.1);
+}
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills {
+    margin: 10px 10px;
+    padding: 10px 20px;
+    align-items: center;
+    border-radius: 23px;
+    z-index: 500;
+    border: 3px solid #cdcdcd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.change {
+    display: inline-block;
+    background-color: #C0D9C9;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    padding: 0px 5px;
+}
+.project{
+    background-color: #06021d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 200px;
+    font-family: "poppins";
+    margin:0
+}
+
+.projectContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+}
+.container{
+    height: 450px;
+    width: 375px;
+    margin:60px;
+    margin-top:100px;
+}
+
+.card{
+    position: relative;
+    margin: 0;
+   height: 100%;
+   width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1500ms;
+    transform-origin: center;
+    }
+    
+.container:hover > .card{
+transform: rotateY(180deg);
+}
+.front{
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: linear-gradient(135deg,#983872,#3c1053);
+    color: #1B0330;
+    font-family: "poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+.projectLink{
+    margin: 10px 10px;
+    padding: 10px 20px;
+    align-items: center;
+    border-radius: 23px;
+    z-index: 500;
+    border: 2px solid #1B0330;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+}
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    background: linear-gradient(135deg,#3c1053,#983872);
+    color: black; 
+    transform: rotateY(180deg);
+    padding: 10px;
+    overflow-y: auto;
+}
+.backHeading{
+margin: 10px;
+font-size: 25px;
+text-align: center;
+}
+
+.backContentUploading{
+padding: 5px;
+text-align: center;
+}
+
+
+
+
+
+
+
+.socialPage{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: linear-gradient(135deg,#b9a4c4,#000000);
+    min-height: 35vh;
+    background-color: #06021D;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+.Connect {
+    padding: 60px 20px 20px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-family: "poppins";
+    align-items: center;
+    font-weight: 300;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+.btnSocial {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btnSocial:hover {
+    transform: scale(1.1);
+}
+
+.socialLogo {
+    width: 50px;
+    height: 50px;
+    border-radius: 200px;
+    background-color: #d5cbcb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+.socialLabel {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.socialLogo img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.btnSocial:hover .socialLabel{
+    opacity: 1;
+    top: -32px;
+}
+
+.ins{
+background-color: #f9722f;
+color: white;
+}
+.gm{
+background-color: #ce3d3d;
+color: white;
+}
+.li{
+background-color: #4267e0;
+color: white;
+}
+.lc{
+background-color: #ff8400;
+color: white;
+}
+.cc{
+background-color: #685a3f;
+color: white;
+}
+.gfg{
+background-color: #72d15f;
+color: white;
+}
+.github{
+background-color: #970799;
+color: white;
+}
+
+.foot{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+.fly-in {
+    opacity: 0;
+    transform: translateY(100px); 
+    transition: all 0.5s ease-out;
+}
+
+.fly-in-visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes move-down {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+
+    90% {
+        top: 100px;
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+}
+@keyframes pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 10px 2px rgba(58, 1, 82, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 10px 4px rgba(164, 84, 198, 0.5);
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        padding: 40px 5vw;
+    }
+    .hey {
+        font-size: 30px;
+    }
+    .name {
+        font-size: 30px;
+    }
+    .tag {
+        font-size: 25px;
+    }
+}
+/* General styles for larger screens remain unchanged */
+
+/* Responsive adjustments for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        height: 400px;
+        width: 300px;
+        margin: 40px;
+        margin-top: 80px;
+    }
+
+    .card {
+        transition: transform 1s; /* Reduce transition time for smaller screens */
+    }
+
+    .front, .back {
+        font-size: 22px; /* Adjust font size for readability */
+    }
+
+    .projectLink {
+        padding: 8px 16px; /* Slightly smaller buttons */
+    }
+}
+
+/* Responsive adjustments for mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .projectContainer {
+        flex-direction: column; /* Stack containers vertically */
+    }
+
+    .container {
+        height: 350px;
+        width: 280px;
+        margin: 20px;
+    }
+
+    .front, .back {
+        font-size: 18px; /* Further reduce font size for smaller cards */
+    }
+
+    .projectLink {
+        padding: 6px 12px; /* Adjust button padding for smaller cards */
+    }
+
+    .back {
+        padding: 5px; /* Ensure back content fits within smaller cards */
+    }
+
+    .backHeading {
+        font-size: 20px;
+    }
+    .backContent{
+        font-size:16px;
+    }
+
+    .backContentUploading {
+        font-size: 16px;
+    }
+}
